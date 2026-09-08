@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Dancing+Script:wght@600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Space+Grotesk:wght@500;600;700;800&display=swap');
 
 :root {
   /* Modern Healthcare Color System */
@@ -34,10 +34,12 @@
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
   --shadow-xl: 0 20px 35px rgba(4, 107, 210, 0.15);
 
-  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Manrope', 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-script: 'Dancing Script', cursive, sans-serif;
+  /* Typography System: Space Grotesk (Main Headings), Poppins (Sub Headings), Inter (Contents) */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-subheading: 'Poppins', 'Inter', sans-serif;
+  --font-serif: 'Poppins', sans-serif;
+  --font-script: 'Poppins', sans-serif;
   --font-malayalam: 'Noto Sans Malayalam', 'Inter', sans-serif;
 
   --radius-sm: 8px;
@@ -63,15 +65,19 @@ html {
   overflow-x: hidden;
 }
 
+/* Contents / Body Text (Inter) */
 body {
   font-family: var(--font-main);
   background-color: var(--neutral-50);
   color: var(--neutral-700);
-  line-height: 1.65;
+  line-height: 1.68;
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -81,16 +87,28 @@ img, video, svg, canvas, picture {
   display: block;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Main Headings (Space Grotesk) */
+h1, .page-banner-title, .hero-title, .section-title, .home-about-title, .about-cta-title {
   font-family: var(--font-heading);
   color: var(--neutral-900);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.22;
+  letter-spacing: -0.022em;
   overflow-wrap: break-word;
   word-break: break-word;
 }
 
+/* Sub Headings (Poppins) */
+h2, h3, h4, h5, h6, .sub-heading, .section-badge, .card-title, .service-card-title, .pillar-title, .value-name, .team-name, .author-name, .footer-heading {
+  font-family: var(--font-subheading);
+  color: var(--neutral-900);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
 p {
+  font-family: var(--font-main);
   margin-bottom: 1rem;
 }
 
@@ -110,7 +128,8 @@ a:hover {
 
 .malayalam-text {
   font-family: var(--font-malayalam);
-  line-height: 1.8;
+  line-height: 1.85;
+  letter-spacing: 0.005em;
 }
 
 /* Custom Scrollbar */

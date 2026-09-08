@@ -447,7 +447,7 @@
 }
 
 .stats-quote-symbol {
-  font-family: Georgia, serif;
+  font-family: var(--font-serif);
   font-size: 4rem;
   line-height: 0.8;
   color: #7cbc28;
@@ -462,10 +462,11 @@
 }
 
 .stats-quote-text {
+  font-family: var(--font-serif);
   font-size: 1.12rem;
   font-style: italic;
   color: #0f172a;
-  line-height: 1.6;
+  line-height: 1.65;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
