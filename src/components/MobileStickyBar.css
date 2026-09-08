@@ -1,0 +1,58 @@
+.mobile-sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-sticky-btn {
+  flex: 1;
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-main, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  line-height: 1;
+  padding: 0 0.5rem;
+  white-space: nowrap;
+}
+
+.mobile-sticky-btn:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+.mobile-sticky-btn.call-btn {
+  background-color: #0b1f3a;
+}
+
+.mobile-sticky-btn.whatsapp-btn {
+  background-color: #25d366;
+}
+
+.mobile-sticky-btn.donate-btn {
+  background-color: #e11d48;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-bar {
+    display: flex;
+  }
+  
+  body {
+    padding-bottom: 54px;
+  }
+}

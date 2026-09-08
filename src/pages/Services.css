@@ -1,0 +1,184 @@
+.full-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-detail-card {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 18px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(12, 58, 110, 0.1);
+  border-color: #38bdf8;
+}
+
+.service-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-detail-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+}
+
+.service-number {
+  background: #0284c7;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+}
+
+.service-detail-subtitle {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #0284c7;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  background: #f0f9ff;
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.service-detail-desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.65;
+}
+
+/* Upcoming Projects */
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.upcoming-card {
+  padding: 2.5rem;
+  border-left: 4px solid var(--accent-emerald);
+  min-width: 0;
+}
+
+.upcoming-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--accent-emerald-light);
+  color: var(--accent-emerald);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.upcoming-title {
+  font-size: 1.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.upcoming-desc {
+  font-size: 1rem;
+  color: var(--neutral-600);
+  line-height: 1.6;
+}
+
+/* Donate CTA Card Section */
+.services-cta-section {
+  padding: 2.5rem 0 3.5rem;
+}
+
+.services-cta-card {
+  background: linear-gradient(135deg, #06182e 0%, #0d2d53 50%, #081d38 100%);
+  border-radius: 24px;
+  padding: 3.5rem 3.5rem;
+  box-shadow: 0 20px 50px rgba(6, 24, 46, 0.25), 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.services-cta-card::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+}
+
+.services-cta-content {
+  max-width: 680px;
+  text-align: left;
+}
+
+.services-cta-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.services-cta-desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.services-cta-btn {
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.4);
+}
+
+/* ==================================================
+   RESPONSIVE MEDIA QUERIES (PLACED AT BOTTOM)
+   ================================================== */
+@media (max-width: 992px) {
+  .full-services-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .upcoming-grid { grid-template-columns: 1fr; }
+  .services-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+
+  .services-cta-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .full-services-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .services-cta-title { font-size: 1.65rem; }
+  .upcoming-card { padding: 1.5rem; }
+  .services-cta-card { padding: 2rem 1.25rem; }
+  .services-cta-btn { width: 100%; }
+}

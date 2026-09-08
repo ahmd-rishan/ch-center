@@ -1,0 +1,432 @@
+/* About Overview Box */
+.about-overview-box {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 3rem;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lead-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-600);
+  margin-bottom: 1.25rem;
+}
+
+.body-text {
+  font-size: 1.05rem;
+  color: var(--neutral-600);
+  line-height: 1.7;
+}
+
+/* Objectives Grid */
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.objective-card {
+  padding: 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.objective-icon-wrapper {
+  background: var(--primary-50);
+  padding: 0.6rem;
+  border-radius: 50%;
+  color: var(--primary-500);
+  flex-shrink: 0;
+}
+
+.objective-text {
+  font-size: 0.98rem;
+  color: var(--neutral-700);
+  line-height: 1.6;
+}
+
+/* Core Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.value-card {
+  padding: 2.25rem;
+  text-align: center;
+  min-width: 0;
+}
+
+.value-icon-box {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.val-icon-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.value-name {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--neutral-900);
+}
+
+.value-desc {
+  font-size: 0.95rem;
+  color: var(--neutral-600);
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+.team-card {
+  text-align: center;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.team-img-wrapper {
+  height: 260px;
+  overflow: hidden;
+  background: var(--neutral-100);
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--transition-normal);
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.06);
+}
+
+.team-info {
+  padding: 1.25rem;
+}
+
+.team-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 0.25rem;
+}
+
+.team-title {
+  font-size: 0.85rem;
+  color: var(--primary-600);
+  font-weight: 600;
+}
+
+/* Voices of Courage Carousel Section */
+.voices-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.voices-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.voices-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.voices-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-300);
+  background: #ffffff;
+  color: var(--neutral-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.voices-nav-btn:hover {
+  background: var(--primary-500);
+  color: #ffffff;
+  border-color: var(--primary-500);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(4, 107, 210, 0.3);
+}
+
+.voices-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0.5rem 0 1rem;
+}
+
+.voices-carousel-track {
+  display: flex;
+  gap: 1.75rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
+  touch-action: pan-y;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.voices-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.voices-slide {
+  flex: 0 0 calc((100% - 1.75rem) / 2);
+  scroll-snap-align: start;
+  min-width: 0;
+  display: flex;
+}
+
+.voice-card {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.25rem;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--neutral-200);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all var(--transition-normal);
+}
+
+.voice-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary-100);
+  transform: translateY(-4px);
+}
+
+.voice-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.voice-author-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-500);
+  flex-shrink: 0;
+  background: var(--neutral-100);
+}
+
+.voice-author-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.voice-author-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  text-align: left;
+  line-height: 1.4;
+}
+
+.voice-author-title {
+  font-size: 0.88rem;
+  color: var(--neutral-500);
+  text-align: left;
+  margin-top: 0.2rem;
+}
+
+.voice-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.voice-quote-icon {
+  color: var(--primary-500);
+  opacity: 0.3;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+
+.voice-quote-text {
+  font-size: 1rem;
+  color: var(--neutral-700);
+  white-space: pre-line;
+  line-height: 1.7;
+  text-align: left;
+  width: 100%;
+}
+
+.voices-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.voices-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--neutral-300);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.voices-dot.active {
+  width: 28px;
+  border-radius: 10px;
+  background: var(--primary-500);
+}
+
+/* Donate CTA Card Section */
+.about-cta-section {
+  padding: 2.5rem 0 3.5rem;
+}
+
+.about-cta-card {
+  background: linear-gradient(135deg, #06182e 0%, #0d2d53 50%, #081d38 100%);
+  border-radius: 24px;
+  padding: 3.5rem 3.5rem;
+  box-shadow: 0 20px 50px rgba(6, 24, 46, 0.25), 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-cta-card::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+}
+
+.about-cta-content {
+  max-width: 680px;
+  text-align: left;
+}
+
+.about-cta-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.about-cta-desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.about-cta-btn {
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.4);
+}
+
+/* ==================================================
+   RESPONSIVE MEDIA QUERIES (PLACED AT BOTTOM)
+   ================================================== */
+@media (max-width: 1024px) {
+  .team-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .objectives-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 992px) {
+  .about-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+
+  .about-cta-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .voices-slide {
+    flex: 0 0 100%;
+  }
+  .voices-header-row {
+    flex-direction: row;
+    align-items: center;
+  }
+  .voices-nav-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .team-img-wrapper { height: auto; aspect-ratio: 1/1; }
+  .values-grid { grid-template-columns: 1fr; }
+  .about-overview-box { padding: 2rem 1.25rem; }
+  .voice-card { padding: 1.5rem 1.25rem; }
+}
+
+@media (max-width: 576px) {
+  .about-cta-btn { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 0.85rem; }
+  .team-info { padding: 0.85rem 0.65rem; }
+  .team-name { font-size: 0.92rem; }
+  .team-title { font-size: 0.78rem; }
+  .about-cta-title { font-size: 1.65rem; }
+  .about-overview-box { padding: 1.5rem 1rem; }
+}
