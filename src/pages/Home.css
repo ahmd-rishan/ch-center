@@ -981,9 +981,21 @@
     gap: 2rem;
   }
 
+  .home-about-section .container {
+    padding-left: clamp(1rem, 5vw, 1.5rem);
+    padding-right: clamp(1rem, 5vw, 1.5rem);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
   .home-about-text-col, .home-about-image-col {
     width: 100%;
     min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
   }
 
   .home-about-image-wrapper {
