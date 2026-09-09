@@ -9,7 +9,25 @@ export default function Services({ setActivePage, onDonateClick }) {
       {/* Page Header Banner */}
       <section className="page-banner">
         <div className="container">
-          <h1 className="page-banner-title">Our Services</h1>
+          <div className="page-banner-grid">
+            <div className="page-banner-text">
+              <h1 className="page-banner-title">Our Services</h1>
+              <div className="page-breadcrumb-pill">
+                <button onClick={() => setActivePage('home')}>Home</button>
+                <span>/</span>
+                <span>Services</span>
+              </div>
+            </div>
+            <div className="page-banner-media">
+              <div className="page-banner-img-wrapper">
+                <img
+                  src="/assets/images/PTH1-scaled.webp"
+                  alt="CH Center Hospice & Medical Services"
+                  className="page-banner-img"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

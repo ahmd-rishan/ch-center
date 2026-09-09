@@ -36,7 +36,25 @@ export default function Contact({ setActivePage, onDonateClick }) {
       {/* Page Header Banner */}
       <section className="page-banner">
         <div className="container">
-          <h1 className="page-banner-title">{contactPageIntro.heading}</h1>
+          <div className="page-banner-grid">
+            <div className="page-banner-text">
+              <h1 className="page-banner-title">{contactPageIntro.heading}</h1>
+              <div className="page-breadcrumb-pill">
+                <button onClick={() => setActivePage('home')}>Home</button>
+                <span>/</span>
+                <span>Contact</span>
+              </div>
+            </div>
+            <div className="page-banner-media">
+              <div className="page-banner-img-wrapper">
+                <img
+                  src="/assets/images/new-hero-building.jpg"
+                  alt="CH Center Malappuram Headquarters"
+                  className="page-banner-img"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
