@@ -235,10 +235,6 @@ export default function Home({ setActivePage, onDonateClick }) {
               <div className="story-image-wrapper">
                 <img src="/assets/images/legacy-lamp-bg.png" alt="Legacy Atmosphere Lamp" className="story-bg-img" />
                 <img src={storyData.image} alt="Sainaba Hajjumma Puthuvachola" className="story-img" />
-                <div className="story-img-badge">
-                  <Heart size={24} color="#e11d48" fill="#e11d48" />
-                  <span>Legacy of Compassion</span>
-                </div>
               </div>
             </div>
           </div>
