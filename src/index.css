@@ -29,10 +29,10 @@
   --bg-gradient-subtle: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
   --bg-gradient-accent: linear-gradient(135deg, #046bd2 0%, #0d9488 100%);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
-  --shadow-xl: 0 20px 35px rgba(4, 107, 210, 0.15);
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 12px 28px rgba(15, 23, 42, 0.08);
+  --shadow-xl: 0 20px 40px rgba(4, 107, 210, 0.12);
 
   /* Typography System: Space Grotesk (Main Headings), Poppins (Sub Headings), Inter (Contents) */
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -126,6 +126,11 @@ a:hover {
   color: var(--primary-700);
 }
 
+:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
 .malayalam-text {
   font-family: var(--font-malayalam);
   line-height: 1.85;
@@ -188,7 +193,7 @@ a:hover {
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   margin-bottom: 1rem;
 }
 
@@ -207,6 +212,7 @@ a:hover {
 .section-description {
   font-size: 1.1rem;
   color: var(--neutral-600);
+  line-height: 1.65;
 }
 
 .section-dark .section-description {
@@ -232,14 +238,14 @@ a:hover {
 .btn-primary {
   background-color: var(--primary-500);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(4, 107, 210, 0.35);
+  box-shadow: 0 4px 12px rgba(4, 107, 210, 0.25);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-600);
   color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(4, 107, 210, 0.45);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(4, 107, 210, 0.35);
 }
 
 .btn-outline {
@@ -251,7 +257,7 @@ a:hover {
 .btn-outline:hover {
   background-color: var(--primary-500);
   color: #ffffff;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .btn-white {
@@ -263,20 +269,20 @@ a:hover {
 .btn-white:hover {
   background-color: var(--primary-50);
   color: var(--primary-600);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .btn-donate {
   background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(225, 29, 72, 0.35);
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.28);
 }
 
 .btn-donate:hover {
   background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
   color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(225, 29, 72, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(225, 29, 72, 0.4);
 }
 
 /* Card Styling */
@@ -289,9 +295,9 @@ a:hover {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--primary-100);
+  border-color: rgba(4, 107, 210, 0.2);
 }
 
 /* Page Hero Header Banner */
