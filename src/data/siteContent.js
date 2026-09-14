@@ -348,8 +348,12 @@ export const upcomingProjects = [
     description: "A welfare and support project launched in cooperation with Jeddah Central KMCC to assist expatriates facing hardship."
   },
   {
-    title: "Physiotherapy Centre",
-    description: ""
+    title: "Adult Physiotherapy Centre",
+    description: "Our Adult Physiotherapy Centre helps individuals restore mobility, relieve pain, and regain independence. Whether you are recovering from surgery, managing chronic pain, or rehabilitating after an injury or stroke, our experienced team provides personalized, goal-directed care tailored to your daily life."
+  },
+  {
+    title: "Early Intervention Centre",
+    description: "At our Early Intervention Centre, we believe every child deserves the right support at the right time. We offer personalized, child-centered therapies for children experiencing developmental delays or challenges, helping them build independence, confidence, and essential life skills."
   }
 ];
 
